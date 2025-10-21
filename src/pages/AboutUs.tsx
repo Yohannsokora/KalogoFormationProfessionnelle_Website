@@ -12,7 +12,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
       name: 'Norbert K. Ounleu',
       position: 'Foundateur',
       credentials: 'Master en Gestion des Entreprises, University of Cape Coast, Ghana et Junior Achievement',
-      image: 'public/IMG_0181.JPG',
+      image: '/IMG_0181.JPG',
       bio: 'M. Norbert Ounleu possède plus de 25 ans d’expérience dans la gestion des affaires temporelles de l’EJCSDJ en Afrique de l’Ouest et en Afrique Centrale. Grâce à sa rigueur, son sens du devoir et son intégrité exemplaire dans l’administration des biens publics, il a su instaurer une gestion transparente et efficace des ressources. Son leadership et sa vision stratégique ont contribué à renforcer la stabilité organisationnelle et à favoriser le développement durable des institutions qu’il a dirigées.',
       specialties: ['Gestion des Affaires et Administration','Leadership Organisationnel','Gestion Financière et Comptable','Développement Institutionnel', 'Éthique et Gouvernance','Gestion des Ressources Publiques']
     },
@@ -20,7 +20,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
       name: 'Valerie A. Tonga',
       position: 'Directrice Générale des Programmes',
       credentials: 'Licence, Université d’Abobo-Adjamé',
-      image: 'public/photo valerie.jpg',
+      image: '/photo valerie.jpg',
       bio: 'Valérie possède plus de 20 ans d’expérience dans la gestion administrative et financière. Au fil de sa carrière, elle a démontré une grande expertise dans la coordination des programmes, la planification stratégique et le suivi budgétaire. Son sens de l’organisation, sa rigueur et son engagement envers l’excellence contribuent à la réussite et à la croissance des projets qu’elle supervise, tout en assurant une gestion efficace et durable des ressources.',
       specialties: ['Gestion Administrative et Financière', 'Planification Stratégique', 'Suivi et Évaluation de Projets','Leadership Organisationnel','Gestion Budgétaire et Comptable', 'Développement des Programmes','Optimisation des Ressources']
     },
@@ -28,7 +28,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
       name: 'Joseph Ounleu',
       position: 'Directeur - Kalogo Travels',
       credentials: 'Bachelor in Accounting, Ensign College',
-      image: 'public/IMG_0176.jpg',
+      image: '/IMG_0176.jpg',
       bio: 'Je suis le Directeur de Kalogo Travels, une agence dont la mission est d’ouvrir les portes à tous ceux qui souhaitent poursuivre leurs études à l’étranger. Notre partenariat avec Kalogo Formation Professionnelle renforce encore cette vision. Faire partie de Kalogo Formation Professionnelle, c’est non seulement acquérir des compétences professionnelles localement, mais aussi se préparer à des études et à des opportunités à l’étranger grâce à notre réseau d’écoles partenaires.',
       specialties: ['Orientation Académique', 'Mobilité Internationale', 'Partenariats Éducatifs', 'Développement Étudiant', 'Leadership & Stratégie']
     },
@@ -36,7 +36,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
       name: 'Franck Sokora',
       position: 'Propriétaire & Co-fondateur Akora Group - Directeur IT (Akora Tech)',
       credentials: 'BS, Brigham Young University-Idaho',
-      image: 'public/IMG_9654.JPG',
+      image: '/IMG_9654.JPG',
       bio: 'Co-fondateur d’Akora Group et responsable d’Akora Tech, j’oriente la vision digitale de l’établissement. Mon équipe pilote l’infrastructure IT, la cybersécurité, le support aux enseignants/étudiants et l’innovation (applications, automatisation, données) pour garantir une expérience d’apprentissage fluide, fiable et sécurisée.',
       specialties: ['Direction & Stratégie','Technologies Éducatives','Cybersécurité','Infrastructure & Réseaux','Data & Automatisation']
     }
