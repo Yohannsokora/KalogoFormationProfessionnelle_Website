@@ -67,7 +67,7 @@ export default function App() {
   return (
       <div className="min-h-screen bg-white font-sans">
         <Header currentPage={currentPage} onPageChange={setCurrentPage} />
-        <main>
+        <main id="content" role="main" className="focus:outline-none">
           {renderPage()}
         </main>
         <Footer onPageChange={setCurrentPage} />

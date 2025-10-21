@@ -15,7 +15,7 @@ export function Footer({ onPageChange }: { onPageChange?: (page: string) => void
     }
   };
   return (
-    <footer className="bg-gray-900 text-white">
+  <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Infos École */}
@@ -40,13 +40,13 @@ export function Footer({ onPageChange }: { onPageChange?: (page: string) => void
               des leaders de demain grâce à une éducation innovante et des possibilités infinies.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors p-2 -m-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors p-2 -m-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors p-2 -m-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <Instagram className="w-6 h-6" />
               </a>
             </div>
@@ -106,7 +106,7 @@ export function Footer({ onPageChange }: { onPageChange?: (page: string) => void
               </div>
               <div className="flex items-center w-full">
                 <Mail className="w-5 h-5 mr-3 text-blue-400 shrink-0" />
-                <p className="text-gray-300 whitespace-nowrap text-sm sm:text-base">
+                <p className="text-gray-300 break-all text-sm sm:text-base">
                     kalogoformationprofessionnelle@gmail.com
                 </p>
               </div>
@@ -121,11 +121,11 @@ export function Footer({ onPageChange }: { onPageChange?: (page: string) => void
             <p className="text-gray-400 mb-4 md:mb-0">
               © 2025 Kalogo Formation Professionnelle. Tous droits réservés.
             </p>
-            <div className="flex space-x-6 text-sm text-gray-400">
-              <button onClick={() => goTo('privacy')} className="hover:text-blue-400 transition-colors">Politique de Confidentialité</button>
-              <button onClick={() => goTo('terms')} className="hover:text-blue-400 transition-colors">Conditions d’utilisation</button>
-              <button onClick={() => goTo('accessibility')} className="hover:text-blue-400 transition-colors">Accessibilité</button>
-              <button onClick={() => goTo('feedback')} className="hover:text-blue-400 transition-colors">Donnez votre avis</button>
+            <div className="flex flex-wrap items-center justify-center md:justify-end text-sm text-gray-400 -mx-3">
+              <button onClick={() => goTo('privacy')} className="mx-3 mt-2 hover:text-blue-400 transition-colors">Politique de Confidentialité</button>
+              <button onClick={() => goTo('terms')} className="mx-3 mt-2 hover:text-blue-400 transition-colors">Conditions d’utilisation</button>
+              <button onClick={() => goTo('accessibility')} className="mx-3 mt-2 hover:text-blue-400 transition-colors">Accessibilité</button>
+              <button onClick={() => goTo('feedback')} className="mx-3 mt-2 hover:text-blue-400 transition-colors">Donnez votre avis</button>
             </div>
           </div>
         </div>

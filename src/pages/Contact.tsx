@@ -637,24 +637,26 @@ const faqItems = [
 export function VirtualTourModal({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-md rounded-2xl border-t-4 border-blue-600 overflow-hidden">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-md max-h-[90vh] overflow-hidden rounded-2xl border-t-4 border-blue-600">
         {/* Gradient header */}
         <div className="-mx-6 -mt-6 h-20 bg-gradient-to-r from-blue-600 to-blue-800" />
-        <div className="flex flex-col items-center text-center -mt-8">
-          <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center mb-3 ring-4 ring-white">
-            <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">
-              <Video className="w-7 h-7" />
+        <div className="max-h-[70vh] overflow-y-auto overscroll-contain">
+          <div className="flex flex-col items-center text-center -mt-8">
+            <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center mb-3 ring-4 ring-white">
+              <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">
+                <Video className="w-7 h-7" />
+              </div>
             </div>
+            <DialogHeader className="items-center">
+              <DialogTitle className="text-2xl text-blue-800">Visite virtuelle</DialogTitle>
+              <DialogDescription className="text-gray-600">
+                Bientôt disponible. Nous préparons une expérience immersive de visite du campus. Restez connectés !
+              </DialogDescription>
+            </DialogHeader>
           </div>
-          <DialogHeader className="items-center">
-            <DialogTitle className="text-2xl text-blue-800">Visite virtuelle</DialogTitle>
-            <DialogDescription className="text-gray-600">
-              Bientôt disponible. Nous préparons une expérience immersive de visite du campus. Restez connectés !
-            </DialogDescription>
-          </DialogHeader>
-        </div>
-        <div className="mt-4 flex justify-center">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => onOpenChange(false)}>Fermer</Button>
+          <div className="mt-4 flex justify-center">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => onOpenChange(false)}>Fermer</Button>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
@@ -726,10 +728,10 @@ export function ScheduleVisitModal({ open, onOpenChange }: { open: boolean; onOp
   };
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl rounded-2xl overflow-hidden p-0">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-2xl max-h-[90vh] overflow-hidden rounded-xl sm:rounded-2xl p-0">
         {/* Banner image */}
-        <div className="h-40 w-full bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1664102306721-422dcc22d032?auto=format&fit=crop&w=1200&q=80')` }} />
-        <div className="p-6 sm:p-8">
+        <div className="h-36 sm:h-40 w-full bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1664102306721-422dcc22d032?auto=format&fit=crop&w=1200&q=80')` }} />
+        <div className="p-6 sm:p-8 max-h-[70vh] overflow-y-auto overscroll-contain">
           <DialogHeader>
             <DialogTitle className="text-2xl text-blue-800">Planifiez votre visite sur le campus</DialogTitle>
             <DialogDescription className="text-gray-600">Choisissez la date et l’heure qui vous conviennent.</DialogDescription>
@@ -773,7 +775,7 @@ export function ScheduleVisitModal({ open, onOpenChange }: { open: boolean; onOp
             </div>
             <div className="flex justify-end gap-3">
               <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Annuler</Button>
-              <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={loading}>{loading ? 'Confirmation…' : 'Confirm Visit'}</Button>
+              <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={loading}>{loading ? 'Confirmation…' : 'Confirmer la visite'}</Button>
             </div>
           </form>
         </div>
@@ -854,10 +856,10 @@ export function ScheduleMeetingModal({ open, onOpenChange }: { open: boolean; on
   };
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-xl rounded-2xl overflow-hidden">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-xl max-h-[90vh] overflow-hidden rounded-2xl">
         {/* Gradient header */}
         <div className="-mx-6 -mt-6 h-20 bg-gradient-to-r from-blue-600 to-blue-800" />
-        <div className="p-6 sm:p-8">
+        <div className="p-6 sm:p-8 max-h-[70vh] overflow-y-auto overscroll-contain">
           <DialogHeader>
             <DialogTitle className="text-2xl text-blue-800">Rencontrez un membre de notre équipe académique</DialogTitle>
             <DialogDescription className="text-gray-600">Choisissez un conseiller et un créneau.</DialogDescription>
@@ -907,7 +909,7 @@ export function ScheduleMeetingModal({ open, onOpenChange }: { open: boolean; on
             </div>
             <div className="flex justify-end gap-3">
               <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Annuler</Button>
-              <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={loading}>{loading ? 'Réservation…' : 'Book Appointment'}</Button>
+              <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={loading}>{loading ? 'Réservation…' : 'Réserver un rendez-vous'}</Button>
             </div>
           </form>
         </div>
@@ -978,10 +980,10 @@ export function AskQuestionModal({ open, onOpenChange }: { open: boolean; onOpen
   };
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg rounded-2xl overflow-hidden">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-lg max-h-[90vh] overflow-hidden rounded-2xl">
         {/* Gradient header */}
         <div className="-mx-6 -mt-6 h-20 bg-gradient-to-r from-blue-600 to-blue-800" />
-        <div className="p-6 sm:p-8">
+        <div className="p-6 sm:p-8 max-h-[70vh] overflow-y-auto overscroll-contain">
           <DialogHeader>
             <DialogTitle className="text-2xl text-blue-800">Posez-nous votre question</DialogTitle>
             <DialogDescription className="text-gray-600">Nous vous répondrons sous 24h.</DialogDescription>
@@ -1012,7 +1014,7 @@ export function AskQuestionModal({ open, onOpenChange }: { open: boolean; onOpen
             </div>
             <div className="flex justify-end gap-3">
               <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Annuler</Button>
-              <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={loading}>{loading ? 'Envoi…' : 'Send Message'}</Button>
+              <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={loading}>{loading ? 'Envoi…' : 'Envoyer le message'}</Button>
             </div>
           </form>
         </div>
@@ -1027,7 +1029,7 @@ function MapsChoiceModal({ open, onOpenChange, target }: { open: boolean; onOpen
   const googleUrl = target ? `https://www.google.com/maps/dir/?api=1&destination=${target.lat},${target.lng}` : '#';
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-sm rounded-2xl">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-sm max-h-[90vh] overflow-hidden rounded-2xl">
         <DialogHeader>
           <DialogTitle>Ouvrir l’itinéraire</DialogTitle>
           <DialogDescription>Choisissez l’application de cartographie</DialogDescription>

@@ -18,7 +18,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
   ];
 
   return (
-    <header className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50 pt-[env(safe-area-inset-top)]">
+  <header className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50 pt-[env(safe-area-inset-top)]">
       {/* Bandeau d’annonce */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-1.5 text-xs sm:text-sm">
         <div className="max-w-7xl mx-auto px-4">
@@ -33,8 +33,8 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
       </div>
 
       {/* header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div className="flex justify-between items-center h-auto py-3 md:h-20 md:py-0">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="flex justify-between items-center h-auto py-2 md:h-20 md:py-0">
           {/* Logo */}
           <div className="flex items-center min-w-0 flex-1 pr-16 sm:pr-0">
             <div className="flex-shrink-0 flex items-center">
@@ -79,7 +79,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
           <div className="md:hidden flex items-center flex-shrink-0 ml-3">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-blue-600 p-3"
+              className="text-gray-600 hover:text-blue-600 p-3 active:scale-[0.98] touch-manipulation"
               aria-label="Toggle navigation"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

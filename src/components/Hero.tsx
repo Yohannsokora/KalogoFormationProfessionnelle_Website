@@ -16,7 +16,7 @@ export function Hero({
   ctaText = "Apply Now"
 }: HeroProps) {
   return (
-    <div className="relative bg-blue-900 text-white overflow-hidden">
+  <div className="relative bg-blue-900 text-white overflow-hidden">
       {backgroundImage && (
         <div className="absolute inset-0">
           <img
@@ -28,20 +28,20 @@ export function Hero({
         </div>
       )}
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto">
               {subtitle}
             </p>
           )}
           {showCTA && (
             <button
               onClick={onCTAClick}
-              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors shadow-lg"
+              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base sm:text-lg font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors shadow-lg active:scale-[0.98] touch-manipulation"
             >
               {ctaText}
             </button>
