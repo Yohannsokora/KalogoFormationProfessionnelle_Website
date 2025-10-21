@@ -30,6 +30,9 @@ import {
 import { toast } from "react-hot-toast";
 import {supabase} from '../lib/supabaseClient';
 import { sendSubmission } from '../utils/sendSubmission';
+// Local images must be imported for Vite to bundle them
+import heroManCote from '../images/Man-Cote-dIvoire.jpg';
+import img2181 from '../images/IMG_2181.jpeg';
 
 export function Admissions({ onPageChange }: { onPageChange?: (page: string) => void }) {
   // --- Sliding pill indicator state/refs (works without Radix CSS vars) ---
@@ -751,7 +754,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('src/images/Man-Cote-dIvoire.jpg')`,
+            backgroundImage: `url(${heroManCote})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/70" />
@@ -888,11 +891,11 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
               {/* Right column: Image + Important Dates with flush alignment */}
       <div className="rounded-2xl bg-gray-100 shadow-inner overflow-hidden">
         {/* Image touches the top/left/right edges */}
-        <img
-        src="src/images/IMG_2181.jpeg"
-        alt="Student Application Process"
-        className="w-full h-90 object-cover"
-        />
+  <img
+  src={img2181}
+  alt="Student Application Process"
+  className="w-full h-90 object-cover"
+  />
 
         {/* Card important dates */}
         <div className="p-6 middle space-y-14">
@@ -938,7 +941,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
                   className = "w-full bg-blue-600 text-white hovr:bg-blue-700"
                   asChild
                 >
-                  <a href="public/fiche_d'inscription_générale.pdf" target = "_blank" rel="noopener noreferrer">
+                  <a href="/fiche_d'inscription_générale.pdf" target = "_blank" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-2" />
                     Fiche d'inscription générale (PDF)
                   </a>
@@ -949,7 +952,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
                   className = "w-full bg-blue-600 text-white hover:bg-blue-700"
                   asChild
                 >
-                  <a href="public/fiche_d'inscription_formation_qualifiante.pdf" target = "_blank" rel="noopener noreferrer">
+                  <a href="/fiche_d'inscription_formation_qualifiante.pdf" target = "_blank" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-2" />
                     Fiche d'inscription formation qualifiante (PDF)
                   </a>

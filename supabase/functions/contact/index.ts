@@ -13,12 +13,21 @@ const RESEND_TO_ADMISSIONS =
 const resend = new Resend(RESEND_API_KEY);
 
 serve(async (req) => {
-  const ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:5174",
-    "https://kalogoformationprofessionnelle.com",
-  ];
+  // Allow overriding CORS origins via env (comma-separated)
+  const ENV_ALLOWED = (Deno.env.get("CORS_ALLOWED_ORIGINS") || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const ALLOWED_ORIGINS = Array.from(
+    new Set([
+      ...ENV_ALLOWED,
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "http://localhost:5174",
+      "https://kalogoformationprofessionnelle.com",
+      "https://www.kalogoformationprofessionnelle.com",
+    ]),
+  );
   const origin = req.headers.get("origin") ?? "";
   const isAllowed = ALLOWED_ORIGINS.includes(origin);
   const corsHeaders: Record<string, string> = isAllowed

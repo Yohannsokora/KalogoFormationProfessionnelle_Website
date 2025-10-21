@@ -10,6 +10,9 @@ import {
   UtensilsCrossed, Laptop, ServerCog, Stethoscope, Pill, ShoppingCart, Zap, MoreHorizontal
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+// Import local images so Vite bundles them correctly
+import emmanuelIkwuegbu from '../images/emmanuel-ikwuegbu--0-kl1BjvFc-unsplash.jpg';
+import hackathonImg from '../images/ChatGPT Image Sep 19, 2025 at 03_30_43 PM.png';
 
 type QualifyingProgram = {
   icon: LucideIcon;
@@ -44,7 +47,7 @@ export function Academics({ onPageChange }: { onPageChange?: (page: string) => v
       title: 'BT Électricité Bâtiment et Énergie Solaire',
       subtitle: 'Niveau 3ème (BEPC)',
       description: "Transformez votre avenir en alimentant celui de la Côte d'Ivoire! Devenez le professionnel indispensable de la transition énergétique avec notre formation de pointe en BT Électricité Bâtiment et Énergie Solaire.",
-      image: 'src/images/emmanuel-ikwuegbu--0-kl1BjvFc-unsplash.jpg',
+  image: emmanuelIkwuegbu,
       highlights: ['Électricien du bâtiment', 'Installateur de systèmes solaires photovoltaïques', 'Technicien technico-commercial ', 'Entrepreneur en électricité et énergie solaire', 'Technicien de maintenance en énergie'],
       features: [
         "Maîtrisez les systèmes électriques classiques du bâtiment et les technologies innovantes de l'énergie solaire.",
@@ -122,7 +125,7 @@ export function Academics({ onPageChange }: { onPageChange?: (page: string) => v
   const extracurriculars = [
     { category: 'Education Sportive', title: 'Sports de Competition', description: "Forger le caractère par le travail d'équipe et la compétition.", image: 'https://images.unsplash.com/photo-1721506931381-3ba300ad71f4?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', activities: ['Football', 'Basketball', 'Tennis', 'Visite Touristique'], icon: Trophy },
     { category: 'Insertion Professionnelle', title: "Panels et Programmes D'Insertion Professionnelle", description: 'Boostez vos compétences: emploi, entrepreneuriat.', image: 'https://images.unsplash.com/photo-1573167101669-476636b96cea?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', activities: ['Gestion financière', "Creation d'entreprise", "Strategies de recherche d'emplois", "Développement personnel et leadership"], icon: Drama },
-    { category: 'Hackathon', title: 'Innovation et Défis Technologiques', description: 'Un espace collaboratif où les étudiants conçoivent, développent et présentent des solutions innovantes en temps limité', image: 'src/images/ChatGPT Image Sep 19, 2025 at 03_30_43 PM.png', activities: ['Développement d’applications web et mobiles', 'Prototypage rapide (Design Thinking)', 'Intelligence artificielle et Data Science', 'Pitch et présentation de projets'], icon: Brain }
+  { category: 'Hackathon', title: 'Innovation et Défis Technologiques', description: 'Un espace collaboratif où les étudiants conçoivent, développent et présentent des solutions innovantes en temps limité', image: hackathonImg, activities: ['Développement d’applications web et mobiles', 'Prototypage rapide (Design Thinking)', 'Intelligence artificielle et Data Science', 'Pitch et présentation de projets'], icon: Brain }
   ];
 
   return (

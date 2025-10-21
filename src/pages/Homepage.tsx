@@ -14,6 +14,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { ScheduleVisitModal } from "./Contact";
+// Import local images so Vite bundles them for production
+import photoCampus from '../images/photo-1643199121319-b3b5695e4acb.avif';
+import chatgptCampus from '../images/ChatGPT Image Sep 19, 2025 at 03_26_06 PM.png';
+import img2179 from '../images/IMG_2179.jpeg';
+import manCote from '../images/Man-Cote-dIvoire.jpg';
 
 interface HomepageProps {
   onPageChange: (page: string) => void;
@@ -64,8 +69,7 @@ export function Homepage({ onPageChange }: HomepageProps) {
       excerpt:
         "Des installations modernes pour l’apprentissage pratique en sciences et technologies.",
       category: "Vie du campus",
-      image:
-        "src/images/photo-1643199121319-b3b5695e4acb.avif",
+      image: photoCampus,
     },
     {
       title: "Admission dans les universités américaines",
@@ -82,15 +86,13 @@ export function Homepage({ onPageChange }: HomepageProps) {
     {
       title: "Kalogo Formation Professionnelle",
       description: "Un programme rigoureux pour inspirer et challenger",
-      image:
-        "src/images/ChatGPT Image Sep 19, 2025 at 03_26_06 PM.png",
+      image: chatgptCampus,
       action: () => onPageChange("academics"),
     },
     {
       title: "Vie sur le campus",
       description: "Une communauté dynamique favorisant l’amitié et le développement",
-      image:
-        "src/images/IMG_2179.jpeg",
+      image: img2179,
       action: () => {
         onPageChange("academics");
         setTimeout(() => {
@@ -101,8 +103,7 @@ export function Homepage({ onPageChange }: HomepageProps) {
     {
       title: "Prêts pour l’avenir",
       description: "Nous préparons nos étudiants pour réussir dans le supérieur",
-      image:
-        "src/images/Man-Cote-dIvoire.jpg",
+      image: manCote,
       action: () => onPageChange("admissions"),
     },
   ];
