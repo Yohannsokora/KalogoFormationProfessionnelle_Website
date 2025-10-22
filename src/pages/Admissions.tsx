@@ -1434,7 +1434,8 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
 
       {/* Event Registration Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-lg">
+        <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-lg max-h-[90vh] overflow-hidden rounded-2xl p-0">
+          <div className="p-6 sm:p-8 max-h-[80vh] overflow-y-auto overscroll-contain">
           <DialogHeader>
             <DialogTitle className="text-xl mb-2">Inscription à l'Événement</DialogTitle>
             <DialogDescription className="text-gray-600">
@@ -1442,8 +1443,8 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
             </DialogDescription>
           </DialogHeader>
           
-          <form onSubmit={handleFormSubmit} className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+          <form onSubmit={handleFormSubmit} className="mt-6 space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="firstName">Prénom *</Label>
                 <Input
@@ -1503,7 +1504,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
             <div className="space-y-2">
               <Label htmlFor="gradeLevel">Niveau Scolaire Actuel/Prévu</Label>
               <Select onValueChange={(value) => handleInputChange('gradeLevel', value)}>
-                <SelectTrigger>
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Sélectionner le niveau scolaire" />
                 </SelectTrigger>
                 <SelectContent>
@@ -1589,6 +1590,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
               </Button>
             </div>
           </form>
+          </div>
         </DialogContent>
       </Dialog>
 
