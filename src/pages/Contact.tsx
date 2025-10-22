@@ -640,11 +640,11 @@ export function VirtualTourModal({ open, onOpenChange }: { open: boolean; onOpen
       <DialogContent className="w-[calc(100vw-2rem)] sm:w-auto sm:max-w-md max-h-[90vh] overflow-hidden rounded-2xl border-t-4 border-blue-600">
         {/* Gradient header */}
         <div className="-mx-6 -mt-6 h-20 bg-gradient-to-r from-blue-600 to-blue-800" />
-        <div className="max-h-[70vh] overflow-y-auto overscroll-contain">
-          <div className="flex flex-col items-center text-center -mt-8">
+        <div className="max-h-[70vh] overflow-y-auto overscroll-contain pt-6">
+          <div className="flex flex-col items-center text-center">
             <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center mb-3 ring-4 ring-white">
               <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">
-                <Video className="w-7 h-7" />
+                <Video className="w-7 h-7 text-blue-700" />
               </div>
             </div>
             <DialogHeader className="items-center">
