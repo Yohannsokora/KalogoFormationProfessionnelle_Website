@@ -938,7 +938,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
               <div className = "flex flex-col gap-4">
                 <Button
                   size = "lg"
-                  className = "w-full bg-blue-600 text-white hovr:bg-blue-700"
+                  className = "w-full bg-blue-600 text-white hover:bg-blue-700 h-auto min-h-10 py-3 whitespace-normal break-words text-left items-start"
                   asChild
                 >
                   <a href="/fiche_d'inscription_générale.pdf" target = "_blank" rel="noopener noreferrer">
@@ -949,7 +949,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
 
                 <Button
                   size = "lg"
-                  className = "w-full bg-blue-600 text-white hover:bg-blue-700"
+                  className = "w-full bg-blue-600 text-white hover:bg-blue-700 h-auto min-h-10 py-3 whitespace-normal break-words text-left items-start"
                   asChild
                 >
                   <a href="/fiche_d'inscription_formation_qualifiante.pdf" target = "_blank" rel="noopener noreferrer">
@@ -1556,7 +1556,7 @@ export function Admissions({ onPageChange }: { onPageChange?: (page: string) => 
                   value={formData.emergencyContactPhone}
                   onChange={(e) => handleInputChange('emergencyContactPhone', e.target.value)}
                   required
-                  placeholder="(555) 987-6543"
+                  placeholder="(+225) 07 07 07 07 07"
                   />
               </div>
             </div>
