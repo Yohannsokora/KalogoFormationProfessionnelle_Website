@@ -129,7 +129,7 @@ export function Academics({ onPageChange }: { onPageChange?: (page: string) => v
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
   {/* Hero */}
   <section className="relative h-auto min-h-[420px] sm:h-[600px] pt-20 sm:pt-24 flex items-center justify-center overflow-hidden bg-blue-900">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1719845853806-1c54b0ed37c5?...')` }} />
@@ -180,9 +180,9 @@ export function Academics({ onPageChange }: { onPageChange?: (page: string) => v
                     <p className="text-lg text-gray-700 mb-6">{division.description}</p>
                     <div className="mb-8">
                       <h4 className="text-lg mb-4">Débouchés professionnels</h4>
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {division.highlights.map((highlight, index) => (
-                          <Badge key={index} className="bg-gray-100 text-gray-800 px-3 py-2 rounded-lg">
+                          <Badge key={index} className="bg-gray-100 text-gray-800 px-3 py-2 rounded-lg whitespace-normal break-words max-w-full w-full text-left">
                             <Star className="w-4 h-4 mr-2 text-blue-600" /> {highlight}
                           </Badge>
                         ))}
