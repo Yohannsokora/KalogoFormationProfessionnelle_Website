@@ -50,7 +50,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
                   Kalogo Formation Professionnelle
                 </h1>
                 <p className="text-[11px] sm:text-sm text-gray-600 mt-1 whitespace-normal leading-snug max-w-[13.5rem] sm:max-w-none">
-                  Formation professionelle d'excellence, insertion assuree
+                  Formation professionnelle d'excellence, insertion assurée
                 </p>
               </div>
             </div>
