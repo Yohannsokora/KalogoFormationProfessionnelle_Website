@@ -12,7 +12,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
       name: 'Norbert K. Ounleu',
       position: 'Foundateur',
       credentials: 'Master en Gestion des Entreprises, University of Cape Coast, Ghana et Junior Achievement',
-  image: '/Photo Norbert.jpg',
+  image: '/photo-norbert.jpg',
       bio: 'M. Norbert Ounleu possède plus de 25 ans d’expérience dans la gestion des affaires temporelles de l’EJCSDJ en Afrique de l’Ouest et en Afrique Centrale. Grâce à sa rigueur, son sens du devoir et son intégrité exemplaire dans l’administration des biens publics, il a su instaurer une gestion transparente et efficace des ressources. Son leadership et sa vision stratégique ont contribué à renforcer la stabilité organisationnelle et à favoriser le développement durable des institutions qu’il a dirigées.',
       specialties: ['Gestion des Affaires et Administration','Leadership Organisationnel','Gestion Financière et Comptable','Développement Institutionnel', 'Éthique et Gouvernance','Gestion des Ressources Publiques']
     },
