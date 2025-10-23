@@ -236,9 +236,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
                   <img
                     src={member.image}
                     alt={member.name}
-                    className={member.image.includes('photo valerie.jpg')
-                      ? 'w-full h-64 md:h-72 lg:h-64 xl:h-72 object-contain bg-gray-100'
-                      : 'w-full h-64 md:h-72 lg:h-64 xl:h-72 object-cover'}
+                    className="w-full h-64 md:h-72 lg:h-64 xl:h-72 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>
