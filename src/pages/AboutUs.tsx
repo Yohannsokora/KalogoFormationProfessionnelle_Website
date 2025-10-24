@@ -251,7 +251,13 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
                   <p className="text-blue-600 mb-1">{member.position}</p>
                   <p className="text-sm text-gray-500 mb-4">{member.credentials}</p>
                   <p className="text-gray-700 mb-6 leading-relaxed">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div
+                    className={`flex gap-2 ${
+                      member.name.includes('Joseph') || member.name.includes('Franck')
+                        ? 'flex-col md:flex-row md:flex-wrap'
+                        : 'flex-wrap'
+                    }`}
+                  >
                     {member.specialties.map((specialty, idx) => (
                       <Badge
                         key={idx}
