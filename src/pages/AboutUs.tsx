@@ -20,7 +20,7 @@ export function AboutUs({ onPageChange }: { onPageChange?: (page: string) => voi
       name: 'Valerie A. Tonga',
       position: 'Directrice Générale des Programmes',
       credentials: 'Licence, Université d’Abobo-Adjamé',
-      image: '/photo valerie.jpg',
+  image: '/Photo2.jpg',
       bio: 'Valérie possède plus de 20 ans d’expérience dans la gestion administrative et financière. Au fil de sa carrière, elle a démontré une grande expertise dans la coordination des programmes, la planification stratégique et le suivi budgétaire. Son sens de l’organisation, sa rigueur et son engagement envers l’excellence contribuent à la réussite et à la croissance des projets qu’elle supervise, tout en assurant une gestion efficace et durable des ressources.',
       specialties: ['Gestion Administrative et Financière', 'Planification Stratégique', 'Suivi et Évaluation de Projets','Leadership Organisationnel','Gestion Budgétaire et Comptable', 'Développement des Programmes','Optimisation des Ressources']
     },
